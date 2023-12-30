@@ -44,7 +44,7 @@ int main(void)
     // Calculate dx, dt, and lambda after user input
     dx = (double)L / (nx + 1);
     dt = (double)TIME / nt;
-    double alfa = 12.5*K / (po * cp);
+    double alfa = 13.56*K / (po * cp);
     double lambda = (alfa * dt) / (dx * dx);
 
     double Tempo[100], Tempt[100];
@@ -225,7 +225,7 @@ for (i = 0; i < nx; i++)
 
     // Initialize all elements to zero...
 
-    printf("\n\n");
+    printf("\n");
 
     // STARTING OF WHILE LOOP.....
 
@@ -257,9 +257,15 @@ for (i = 0; i < nx; i++)
                     Tempo[s] = T_left;
 
                 }
+                else if ( s == nx-1 ) {
+
+                    Tempt[s]  =  T_Right;
+
+                }
                 else {
 
                     Tempo[s] = Tempt[s];
+
                 }
 
             }
