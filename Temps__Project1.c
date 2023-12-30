@@ -64,7 +64,7 @@ int main(void)
                 {
 
                     A[i][j] = -(lambda + 1);
-                    I[i][j] = 1;
+                    I[i][j] = 1.00;
                 }
                 else
                 {
@@ -73,14 +73,14 @@ int main(void)
                     {
 
                         A[i][j] = -(lambda + 1);
-                        I[i][j] = 1;
+                        I[i][j] = 1.00;
                     }
 
                     else
                     {
 
                         A[i][j] = -(2 * lambda + 1);
-                        I[i][j] = 1;
+                        I[i][j] = 1.00;
                     }
                 }
             }
@@ -91,13 +91,13 @@ int main(void)
                 {
 
                     A[i][j] = lambda;
-                    I[i][j] = 0;
+                    I[i][j] = 0.00;
                 }
                 else
                 {
 
-                    A[i][j] = 0;
-                    I[i][j] = 0;
+                    A[i][j] = 0.00;
+                    I[i][j] = 0.00;
                 }
             }
         }
