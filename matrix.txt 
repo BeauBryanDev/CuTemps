@@ -1,0 +1,91 @@
+    K = 398;
+    cp = 386;
+    po  = 8960;
+    L  = 4;
+    T  = 10;
+    nx = 10;
+    nt = 20;
+    To  = 24;
+    T_left = 120;
+    T_Right = 12;
+
+    int M_Size = dx;
+    int dmatrix = 2 * M_Size;
+    int row, col;
+    int aux;
+    double factor;
+
+   
+   
+    for (row = 0; row < M_Size; row++)
+    {
+
+        double pivot = A[i][i];
+
+        if (pivot == 0)
+        {
+
+            printf("This Matrix is Singular Matrix, >Then it does not exits inverse!");
+
+            return -1;
+        }
+
+        for (j = 0; j < M_Size; j++)
+        {
+
+            A[row][j] /= factor;
+        }
+        for (i = 0; i < M_Size ; i++)
+        {
+
+            if (i != row )
+            {
+
+                double factor = A[i][row];
+
+                for (j = 0; j < 2 * M_Size; j++)
+                {
+
+                    A[i][j] -= factor*A[row][j];
+                }
+            }
+        }
+    }
+
+    void displayMatrix(int M_Size, double Matrix[M_Size][M_Size])
+{
+
+    for (i = 0; i < M_Size; i++)
+    {
+
+        for (j = 0; j < M_Size; j++)
+        {
+
+            printf("%.2f\t", Matrix[i][j]);
+        }
+
+        printf("\n");
+    }
+}
+    displayMatrix( M_Size, A );
+
+    
+
+
+    double TAM[6]  = {0.0};
+
+            for ( j = 0; j < 6 ; j ++ )  {
+
+        printf("%d ", TAM[j] );
+    }
+    
+
+    for (i = 0; i < nt; i++)
+    {
+
+        for (j = 0; j < nx; j++)
+        {
+
+            R[i][j] = 0.0;
+        }
+    }
