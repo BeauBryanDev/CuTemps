@@ -1,0 +1,2 @@
+this heat transfer protocl temperature to run 1D Simulator that depicts temperatures over the time and space 0<t<T,  0<x<L.
+
