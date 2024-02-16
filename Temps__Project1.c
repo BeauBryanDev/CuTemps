@@ -8,9 +8,13 @@ double L, TIME, nx, nt;
 double K, cp, po, t;
 double To, T_left, T_Right;
 double dt, dx;
-
+//This is a Temperature simulator to Model the temperature of a X!D Bar made up of >Cupper along the X_Axis.
 int main(void)
 {
+//These are the parameter to input.
+// Cooper conductivity as : 385 W°K/m
+//Cooper Density as >: 8860 Kg/m3
+//Cooper Specific Heat as : 386 J/Kg°C
     printf("******************\n");
     printf("***Temperature****\n");
     printf("******************\n");
